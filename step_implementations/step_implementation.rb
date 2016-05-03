@@ -1,9 +1,22 @@
+ENV['RACK_ENV'] = 'test'
 
-step 'Vowels in English language are <vowels>.' do |x|
-end
+require './app/Fantastic_fei.rb'
+require 'minitest/autorun'
+require 'rack/test'
 
-step 'The word <word> has <count> vowels.' do |x, y|
-end
+step 'Home page is accessible.' do
+  class FantasticFeiTest < Minitest::Test
+    include Rack::Test::Methods
 
-step 'Almost all words have vowels <table>' do |x|
+    def app
+      Sinatra::Application
+    end
+
+    def test_it_says_hello_world
+      get '/'
+      assert last_response.ok?
+      assert_equal 'Hello world!', last_response.body
+    end
+
+  end
 end
