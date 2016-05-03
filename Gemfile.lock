@@ -11,13 +11,19 @@ GEM
     os (0.9.6)
     parser (2.3.1.0)
       ast (~> 2.2)
+    rack (1.6.4)
+    rack-protection (1.5.1)
+      rack
     ruby-protocol-buffers (1.5.1)
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+    tilt (1.4.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   gauge-ruby (~> 0.2.0)
-
-BUNDLED WITH
-   1.10.6
+  sinatra (= 1.4.7)
