@@ -1,0 +1,5 @@
+This is a pro for running server on Go.
+
+step 1: install gem dependencies with 'bundle install'
+step 2: run tests with 'gauge specs'
+step 3: start server on local with 'ruby app/Fantastic_fei.rb'
