@@ -3,7 +3,7 @@ This is a pro for running server on CentOS.
 step 1:install rvm with ''(refer 'https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-on-centos-6-with-rvm')
 step 2:install ruby with 'rvm install 1.9.3'
 step 3:then install bundle with 'gem install bundle'
-step 4:install gauge-ruby with 'gem install gauge-ruby -v '0.2.0''
+step 4:install gauge-ruby with 'gauge --install ruby'
 step 5: install gem dependencies with 'bundle install'
 step 6: run tests with 'gauge specs'
 step 7: start server on local with 'ruby app/Fantastic_fei.rb'
