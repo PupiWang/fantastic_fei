@@ -10,8 +10,9 @@ else
   source ~/.rvm/bin/rvm
 fi
 
+rvm install 1.9.3
+rvm --default use 1.9.3
 
-# rvm --default use 1.9.3
 # bundle install
 #
 # echo '-----start--------'
