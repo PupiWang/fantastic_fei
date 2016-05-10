@@ -22,9 +22,9 @@ then
   gem install bundle
 fi
 
-if ! type gauge ruby >/dev/null 2>&1
+if ! type /usr/local/bin/gauge >/dev/null 2>&1
 then
-  ./install.sh
+  sudo ./install.sh
   gauge --install ruby
 fi
 
