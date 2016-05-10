@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo '----install dependencies----'
-
 if [[ -s "$HOME/.rvm/bin/rvm" ]] ; then
   source "$HOME/.rvm/bin/rvm"
 else
@@ -25,10 +23,9 @@ fi
 if ! type /usr/local/bin/gauge >/dev/null 2>&1
 then
   sudo ./install.sh
-  gauge --install ruby
+  /usr/local/bin/gauge --install ruby
 fi
 
 bundle install
 
-# echo '-----test--------'
-# /usr/local/bin/gauge specs
+/usr/local/bin/gauge specs
