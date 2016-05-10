@@ -1,6 +1,6 @@
 #!/bin/bash
-echo '-----user--------'
-echo $USER
+rvm --default use 1.9.3
+bundle install
 
-echo '-----start--------'
+echo '-----run test--------'
 /usr/local/bin/gauge specs
