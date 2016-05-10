@@ -1,2 +1,9 @@
 /.idea
 /logs
+.vagrant/
+gauge-0.4.0-linux.x86_64.zip
+go-agent-16.4.0-3223.noarch.rpm
+go-server-16.4.0-3223.noarch.rpm
+jdk-7u79-linux-x64.rpm
+bin/
+share/
