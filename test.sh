@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo '----prepare----'
+echo '----install dependencies----'
+
 if [[ -s "$HOME/.rvm/bin/rvm" ]] ; then
   source "$HOME/.rvm/bin/rvm"
 else
@@ -10,10 +11,24 @@ else
   source ~/.rvm/bin/rvm
 fi
 
-rvm install 1.9.3
-rvm --default use 1.9.3
+if test -f "$HOME/.rvm/scripts/rvm"; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+fi
 
-# bundle install
-#
-# echo '-----start--------'
+if ! hash ruby >/dev/null 2>&1
+then
+  rvm install 1.9.3
+  rvm --default use 1.9.3
+  gem install bundle
+fi
+
+if ! type gauge ruby >/dev/null 2>&1
+then
+  ./install.sh
+  gauge --install ruby
+fi
+
+bundle install
+
+# echo '-----test--------'
 # /usr/local/bin/gauge specs
